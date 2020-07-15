@@ -8,7 +8,7 @@ At Tenet the prefered way to add this config file is to include a renovate optio
 
     "renovate": {
         "extends": ["github>TenetPartners/renovate-config"],
-        "assignees": ["add-github-name-here"],
+        "assignees": ["add-github-name-here"]
     }
 
 You can, however, include the above lines in any of the acceptable renovate config files. renovate.json, .renovaterc, etc...
