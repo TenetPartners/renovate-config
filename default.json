@@ -1,0 +1,87 @@
+{
+    "extends": [
+      "config:base"
+    ],
+    "automerge": true,
+    "automergeType": "branch",
+    "major": {
+      "automerge": false
+    },
+    "packageRules": [
+      {
+        "packagePatterns": [ "eslint" ],
+        "groupName": "eslint",  
+        "schedule": [
+          "after 1am every weekday",
+          "before 12pm every weekday",
+          "every weekend",
+          "on the first day of the month"
+        ],
+        "automerge": true,
+        "automergeType": "branch"
+      },
+      {
+        "packagePatterns": [ "jest" ],
+        "groupName": "jest",  
+        "schedule": [
+          "after 1am every weekday",
+          "before 12pm every weekday",
+          "every weekend",
+          "on the first day of the month"
+        ],
+        "automerge": true,
+        "automergeType": "branch"
+      },
+      {
+          "packagePatterns": [ "stylelint" ],
+          "groupName": "styleline",
+          "schedule": [
+            "after 1am every weekday",
+            "before 12pm every weekday",
+            "every weekend",
+            "on the first day of the month"
+          ],
+          "automerge": true,
+          "automergeType": "branch"
+        },
+        {
+            "packagePatterns": [ "^@testing-library" ],
+            "groupName": "testing-library",  
+            "schedule": [
+              "after 1am every weekday",
+              "before 12pm every weekday",
+              "every weekend",
+              "on the first day of the month"
+            ],
+            "automerge": true,
+            "automergeType": "branch"
+          },
+        {
+          "packagePatterns": [ "^gatsby" ],
+          "groupName": "gatsby",
+          "updateTypes": ["minor"],
+          "automerge": false
+        },
+        {
+          "packagePatterns": [ "^react" ],
+          "groupName": "react",
+          "updateTypes": ["minor"],
+          "automerge": false
+        },
+        {
+          "packageNames": ["nuka-carousel"],
+          "updateTypes": ["minor"],
+          "automerge": false
+      },
+      {
+          "packageNames": ["rebass"],
+          "updateTypes": ["minor"],
+          "automerge": false
+      }],
+    "schedule": [
+      "after 8pm every weekday",
+      "before 8am every weekday",
+      "every weekend"
+    ],
+    "timezone": "America/New_York"
+}  
